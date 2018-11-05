@@ -1,0 +1,67 @@
+.home
+	width: 100%
+	height: 700px
+	background: url("../../images/Background_Image.png") no-repeat center top
+	background-size: cover
+	padding-top: 45px
+
+.header-main
+	display: flex
+	justify-content: space-between
+
+
+.logo
+	margin-left: 7px
+	font-family: 'Damion', cursive
+	font-size: 28px
+	font-weight: 400
+	line-height: 1
+	&__link
+		color: $orange
+		text-decoration: none
+		cursor: pointer
+
+.menu
+	display: flex
+	flex-direction: row
+	margin-right: -7px
+	list-style: none
+	box-sizing: border-box
+	&__link
+		margin-left: 18px
+		padding: 10px 16px
+		border-radius: 10px 
+		color: $white
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 14px
+		font-weight: 400
+		transition:  all 0.3s
+		&:hover
+			background: rgba(52, 52, 52, 0.5)
+
+.home__title
+	text-align: center
+	margin-top: 225px
+	padding: 15px 47px
+	background: rgba(52, 52, 52, 0.5)
+	border-radius: 18px
+	line-height: 1
+	&-cursive
+		display: block
+		margin-bottom: 49px
+		font-family: Merienda, serif
+		font-size: 34px
+		font-style: italic
+		letter-spacing: -1px
+	&-text
+		color: $white
+		font-size: 73px
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 1
+	&-ls
+		letter-spacing: -1.88px
+
+.home__btn
+	margin-top: 60px
