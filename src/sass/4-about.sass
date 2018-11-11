@@ -1,0 +1,96 @@
+.about-list-box
+	margin-top: 77px
+
+.about__list
+	margin: 0 auto
+	text-align: center
+
+.about__circle
+	position: relative
+	border-radius: 50%
+	width: 169px
+	height: 169px
+	border: 7px solid $white-more-darker	
+	
+
+.about__item:not(:first-child)
+	margin-top: 91px
+
+.about__item
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	&-img
+		position: relative
+		margin: 0 auto
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 100%
+			right: 50%
+			transform: translate(-50%)
+			width: 2px
+			height: 105px
+			background: $white-more-darker
+		img
+			display: block
+			min-width: 100%
+
+	&-text
+		width: 307px
+
+	&-heading
+		color: $black
+		font-size: 18px
+		font-weight: 700
+		letter-spacing: -0.45px
+		text-transform: uppercase
+		span
+			display: block
+			line-height: 1.8
+	&-text p
+		margin-top: 17px
+		color: $gray
+		font-family: "Roboto Slab", serif
+		font-size: 14px
+		font-weight: 400
+		line-height: 1.3
+		letter-spacing: -0.35px
+	&--text
+		&-right
+			position: absolute
+			top: 0
+			left: 100%
+			margin-left: 45px
+			text-align: left
+		&-left
+			position: absolute
+			top: 0
+			right: 100%
+			margin-right: 45px
+			text-align: right
+
+.about__continue
+	display: flex
+	margin: 0 auto
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	color: $white
+	background: $orange
+	&--text
+		text-align: center
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7)
+		color: $white
+		font-size: 18px
+		font-weight: 700
+		font-family: Montserrat
+		text-transform: uppercase
+		letter-spacing: -0.45px
+		line-height: 1.4
+		span
+			display: block
+		&-dots
+			margin-top: 23px

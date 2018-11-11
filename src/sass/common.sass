@@ -1,4 +1,27 @@
+body
+	font-family: Montserrat, sans-serif
+
 .wrapper
 	margin: 0 auto
 	width: 100%
 	max-width: 941px
+
+.section
+	padding: 120px 0
+	&:nth-child(odd)
+		background: $white-darker
+
+.section__title
+	text-align: center
+	&-text
+		color: #222222
+		font-size: 40px
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: -1px
+	&-subtitle
+		margin-top: 13px
+		color: $gray
+		font-family: "Droid Serif", serif
+		font-size: 16px
+		font-style: italic
