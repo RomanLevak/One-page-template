@@ -1,52 +1,27 @@
+@keyframes show-menu
+  0%
+    transform: translate(100%)
+  100%
+    transform: translate(0)
+
+
 .home
-	width: 100%
+	max-width: 100%
 	height: 700px
 	background: url("../../images/Background_Image.png") no-repeat center top
 	background-size: cover
 	padding-top: 45px
-
+	overflow: hidden
+	
 .header-main
 	display: flex
 	justify-content: space-between
-
-
-.logo
-	margin-left: 7px
-	font-family: 'Damion', cursive
-	font-size: 28px
-	font-weight: 400
-	line-height: 1
-	&__link
-		color: $orange
-		text-decoration: none
-		cursor: pointer
-
-.menu
-	display: flex
-	flex-direction: row
-	margin-right: -16px
-	list-style: none
-	box-sizing: border-box
-	&__link
-		margin-left: 8px
-		padding: 10px 16px
-		color: $white
-		text-decoration: none
-		text-transform: uppercase
-		font-size: 14px
-		font-weight: 400
-		transition:  all 0.3s
-		&:hover
-			background: rgba(52, 52, 52, 0.5)
-	&__item:last-child
-		margin-right: 0
 
 .home__title
 	text-align: center
 	margin-top: 225px
 	padding: 15px 47px
-	background: rgba(52, 52, 52, 0.5)
-	line-height: 1
+	background: $black-transparent
 	&-cursive
 		display: block
 		margin-bottom: 49px
@@ -56,12 +31,143 @@
 		letter-spacing: -1px
 	&-text
 		color: $white
-		font-size: 73px
+		font-size: 72px
 		font-weight: 700
+		font-family: Montserrat, sans-serif
 		text-transform: uppercase
 		line-height: 1
-	&-ls
-		letter-spacing: -1.88px
+		letter-spacing: -2px
+
+.logo
+	margin-left: 7px
+	font-family: 'Damion', cursive
+	font-size: 32px
+	font-weight: 400
+	line-height: 1
+	&__link
+		color: $orange
+		text-decoration: none
+		cursor: pointer
+
+.menu
+	&-box
+		margin-top: 12px
+		position: absolute
+		right: 8px
+	
+	position: relative
+	display: flex
+	justify-content: space-between
+	padding-right: 10px
+	list-style: none
+	box-sizing: border-box
+	&__link
+		margin-left: 8px
+		padding: 10px 16px
+		color: $white
+		text-decoration: none
+		text-transform: uppercase
+		font-family: Montserrat, sans-serif
+		font-weight: 400
+		transition:  all 300ms
+		&:hover
+			background: $gray-transparent
+	&__item:last-child
+		margin-right: 0
+
+	&-toggle
+		display: none
+		text-align: right
+		cursor: pointer
+		div
+			height: 3px
+			width: 39px
+			background: $black
+			border-radius: 3px
+			& + div
+				margin-top: 7px
 
 .home__btn
 	margin-top: 60px
+
+//section padding
+@media (max-width: 1080px)
+	.about.section
+		padding: 120px 0
+
+//menu
+@media (max-width: 669px)
+	.menu
+		position: absolute
+		top: 12px
+		padding: 0
+		&-box
+			display: block
+			width: 174px
+			text-align: right
+
+		display: block
+		margin-top: 15px
+		justify-content: flex-start
+		&-toggle
+			position: absolute
+			display: block
+			right: 8px
+		&__link
+			display: none
+			align-items: center
+			width: 100%
+			height: 40px
+			box-sizing: border-box
+			text-align: center
+			transition: all 300ms
+			&:hover
+				background: $gray-transparent
+		&.active &__link
+			display: flex
+			margin-left: 0
+		&.active
+			display: block
+			animation-name: show-menu
+			animation-duration: 0.3s
+			animation-timing-function: cubic-bezier(.31,.44,.35,1.47)
+			animation-fill-mode: forwards
+			background: $gray-transparent
+
+@media (max-width: 600px)
+	.header-main
+		margin-top: -16px
+	.home__title
+		margin-top: 200px
+		padding: 15px 36px
+		&-cursive
+				margin-bottom: 36px
+				font-size: 28px
+		&-text
+			color: $white
+			font-size: 45px
+	.home__btn
+		margin-top: 40px
+	.menu
+		&__link
+			height: 38px
+
+@media (max-width: 480px)
+	.header-main
+		margin-top: -24px
+	.home__title
+		margin-top: 170px
+		padding: 13px 27px
+		&-cursive
+				margin-bottom: 28px
+				font-size: 24px
+		&-text
+			color: $white
+			font-size: 40px
+	.home__btn
+		margin-top: 35px
+		font-size: 16px
+
+	.menu
+		&__link
+			height: 32px

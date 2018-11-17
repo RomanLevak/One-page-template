@@ -1,14 +1,30 @@
 .services-list-box
 	margin-top: 80px
-	padding: 0 3px
+	padding: 0 8px
 
 .services-list
 	display: flex
-	text-align: center
+	justify-content: space-between
+	flex-wrap: wrap
 	&__item
-		margin-right: 54px
+		position: relative
+		width: 274px
+		transition: all 300ms
 		&:last-child
 			margin-right: 0
+		&:after
+			display: block
+			content: ''
+			position: absolute
+			width: 70%
+			height: 6px
+			background: $white
+			left: 50%
+			top: calc(100% + 17px)
+			transform: translate(-50%)
+			transition: all 300ms
+		&:hover:after
+			background: $orange-darker
 	&__icon
 		display: flex
 		margin: 0 auto
@@ -26,8 +42,29 @@
 		font-weight: 700
 		letter-spacing: -0.45px
 	&__text
-		color: #777777
-		font-family: "Roboto Slab", serif
-		font-size: 14px
+		margin-top: 15px
+		color: $gray
+		font-family: "Roboto Slab", sans-serif
+		// font-size: 14px
 		font-weight: 400
 		letter-spacing: -0.35px
+		line-height: 1.4
+
+.team__logos-list
+	display: flex
+	justify-content: space-between
+	padding: 0 86px
+
+@media (max-width: 838px)
+	.services-list
+		justify-content: center
+		&__item
+			margin-top: 27px
+		&-box
+			margin-top: 60px
+
+
+@media (max-width: 600px)
+	.services-list
+		&-box
+			margin-top: 27px

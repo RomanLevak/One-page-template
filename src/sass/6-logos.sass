@@ -1,0 +1,35 @@
+.team__logos-list
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	padding: 60px 86px
+	background: $white
+
+.logos-list
+
+	&__img
+		flex: none
+		min-width: 25%
+		text-align: center
+		flex: none
+		& img
+			max-width: 100%
+			margin: 0 auto
+
+@media (max-width: 922px)
+	.team__logos-list
+		padding: 50px 63px
+
+	.logos-list
+		&__img
+			width: 50%
+			margin-bottom: 25px
+
+@media (max-width: 474px)
+	.team__logos-list
+		padding: 40px 20px
+
+	.logos-list
+		&__img
+			width: 100%
+			margin-bottom: 17px

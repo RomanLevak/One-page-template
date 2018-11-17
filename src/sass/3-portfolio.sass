@@ -3,29 +3,50 @@
 
 .portfolio__list
 	display: flex
-	flex-wrap: wrap
 	justify-content: space-between
+	flex-wrap: wrap
+	padding: 0 8px
+	overflow: hidden
 
 .portfolio__item
 	margin-bottom: 50px
+	& + .portfolio__item
+		margin-left: 5px
 	padding-bottom: 27px
-	width: 291px
+	max-width: 291px
 	background: $white
-	&-img
-		height: 301px
+	transition: all 200ms
+	&:hover
+		transform: scale(1.1)
 	& img
 		display: block
-		min-width: 100%
+		max-width: 100%
 	&-text
 		margin-top: 27px
 		text-align: center
 	&-title
-		color: #333333
+		color: $black
 		font-size: 18px
 		font-weight: 700
 		letter-spacing: -0.45px
 	&-subtitle
 		color: $gray-lighter
 		font-family: "Droid Serif"
-		font-size: 14px
+		// font-size: 14px
 		font-style: italic
+
+@media (max-width: 918px)
+	.portfolio__list
+		justify-content: space-around
+
+@media (max-width: 320px)
+	.portfolio__item
+		margin-bottom: 21px
+		&-text
+			margin-top: 13px
+		&-title
+			font-size: 15px
+		&-subtitle
+			font-size: 13px
+		&:hover
+			transform: none

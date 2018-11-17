@@ -1,0 +1,32 @@
+.footer
+	position: relative
+	display: flex
+	height: 90px
+	padding: 0 17px
+	align-items: center
+	background: #fff
+	.wrapper
+		position: relative
+	.social__link
+		background: $black
+		span
+			color: $white
+		&:hover
+			background-color: $white
+			& span
+				color: $black
+				
+.copyright
+	position: absolute
+	left: 0
+	transform: translate(0, -50%)
+	top: 50%
+	color: $gray;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: -0.35px;
+
+@media (max-width: 852px)
+	.copyright
+		position: static
+		transform: none
