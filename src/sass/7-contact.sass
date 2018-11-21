@@ -1,9 +1,8 @@
 .contact
-	padding: 112px 8px 0
 	height: 676px
 	box-sizing: border-box
 	background: $black
-	background: url(../../images/background-contact.png) 710px 0 no-repeat, $black
+	background: url(../../images/background-contact.png) 710px 0 no-repeat, $black !important
 	.section__title
 		&-text
 			color: $white
@@ -14,6 +13,7 @@
 
 .form-wrap
 	margin-top: 76px
+	padding: 0 12px
 
 .form
 	display: flex
@@ -45,15 +45,14 @@
 			text-transform: uppercase
 		&:focus
 			box-shadow: 0px 0px 2px 1px $orange
-
-	input 
-		height: 50px
+		&:not(textarea)
+			height: 50px
 
 	&__textarea
 		height: 100%
 
 	&__submit-btn
-		margin-top: 29px
+		margin: 29px auto -5px
 		padding: 0 7px
 		border-radius: 5px
 		cursor: pointer
@@ -61,6 +60,7 @@
 @media (max-width: 600px)
 	.contact
 		padding: 65px 8px 0
+		height: 600px
 	.form
 		&-wrap
 			margin-top: 54px
@@ -74,6 +74,7 @@
 @media (max-width: 320px)
 	.contact
 		padding: 65px 8px 0
+		height: 570px
 	.form
 		&-wrap
 			margin-top: 20px
@@ -81,8 +82,11 @@
 			margin-top: 12px !important
 			font-size: 12px
 			padding: 9px
+			&:not(textarea)
+				height: 40px
 		&__left-wrap, &__right-wrap
 			width: 90%
 			margin: 0 auto
-		input 
+		&__submit-btn
 			height: 40px
+			font-size: 15px

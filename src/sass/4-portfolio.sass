@@ -15,12 +15,13 @@
 	padding-bottom: 27px
 	max-width: 291px
 	background: $white
-	transition: all 200ms
-	&:hover
-		transform: scale(1.1)
-	& img
+	img
 		display: block
 		max-width: 100%
+		transition: all 200ms
+	&:hover img
+		transform: scale(1.1)
+	
 	&-text
 		margin-top: 27px
 		text-align: center
@@ -31,8 +32,7 @@
 		letter-spacing: -0.45px
 	&-subtitle
 		color: $gray-lighter
-		font-family: "Droid Serif"
-		// font-size: 14px
+		font-family: "Droid Serif", serif
 		font-style: italic
 
 @media (max-width: 918px)
